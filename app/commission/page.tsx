@@ -18,7 +18,7 @@ const transactions: Transaction[] = [
   {
     description: "Commission",
     amount: 48000,
-    date: "22nd Feb, 24 . 7:25PM",
+    date: "2024-02-22T19:25:00Z",
     status: "PAID",
     transactionId: "TID3872XG9",
     paymentMethod: "Wallet",
@@ -26,7 +26,7 @@ const transactions: Transaction[] = [
   {
     description: "PA Cashout",
     amount: -48000,
-    date: "22nd Feb, 24 . 7:25PM",
+    date: "2024-02-22T19:25:00Z",
     status: "PAID",
     transactionId: "TID3872XG9",
     paymentMethod: "Bridge Account",
@@ -34,7 +34,7 @@ const transactions: Transaction[] = [
   {
     description: "PA Cashout",
     amount: -48000,
-    date: "22nd Feb, 24 . 7:25PM",
+    date: "2024-02-22T19:25:00Z",
     status: "PAID",
     transactionId: "TID3872XG9",
     paymentMethod: "Bridge Account",
@@ -42,7 +42,7 @@ const transactions: Transaction[] = [
   {
     description: "Commission",
     amount: 48000,
-    date: "22nd Feb, 24 . 7:25PM",
+    date: "2024-02-22T19:25:00Z",
     status: "PAID",
     transactionId: "TID3872XG9",
     paymentMethod: "Wallet",
@@ -50,7 +50,7 @@ const transactions: Transaction[] = [
   {
     description: "Commission",
     amount: 48000,
-    date: "22nd Feb, 24 . 7:25PM",
+    date: "2024-02-22T19:25:00Z",
     status: "PAID",
     transactionId: "TID3872XG9",
     paymentMethod: "Wallet",
@@ -58,7 +58,7 @@ const transactions: Transaction[] = [
   {
     description: "Commission",
     amount: 48000,
-    date: "22nd Feb, 24 . 7:25PM",
+    date: "2024-02-22T19:25:00Z",
     status: "PAID",
     transactionId: "TID3872XG9",
     paymentMethod: "Wallet",
@@ -66,7 +66,7 @@ const transactions: Transaction[] = [
   {
     description: "Commission",
     amount: 48000,
-    date: "22nd Feb, 24 . 7:25PM",
+    date: "2024-02-22T19:25:00Z",
     status: "PAID",
     transactionId: "TID3872XG9",
     paymentMethod: "Wallet",
@@ -74,7 +74,7 @@ const transactions: Transaction[] = [
   {
     description: "Commission",
     amount: 48000,
-    date: "22nd Feb, 24 . 7:25PM",
+    date: "2024-02-22T19:25:00Z",
     status: "PENDING",
     transactionId: "TID3872XG9",
     paymentMethod: "Wallet",
@@ -82,7 +82,7 @@ const transactions: Transaction[] = [
   {
     description: "Commission",
     amount: 48000,
-    date: "22nd Feb, 24 . 7:25PM",
+    date: "2024-02-22T19:25:00Z",
     status: "FAILED",
     transactionId: "TID3872XG9",
     paymentMethod: "Wallet",
@@ -108,6 +108,7 @@ const summary: SummaryInterface[] = [
     variant: "expandable",
   },
 ];
+
 
 const Commission = (props: Props) => {
   return (
