@@ -87,12 +87,12 @@ export default function Home() {
         {
           title: "Key Requirement",
           description:
-            "Basic platform familiarity (AliExpress, Namecheap, Amazon)",
+            "Proficient in managing multiple currencies and handling larger volumes.",
           descIcon: "/icons/pen.png",
         },
         {
           title: "Responsibilities",
-          description: "Handle small, simple transactions.",
+          description: "Manage regional clients and medium-scale transactions.",
           descIcon: "/icons/pen.png",
         },
         {
@@ -122,12 +122,12 @@ export default function Home() {
         {
           title: "Key Requirement",
           description:
-            "Basic platform familiarity (AliExpress, Namecheap, Amazon)",
+            "Advanced skills in secure payments , leadership and training others.",
           descIcon: "/icons/pen.png",
         },
         {
           title: "Responsibilities",
-          description: "Handle small, simple transactions.",
+          description: "Handle large transaction and corporate clients.",
           descIcon: "/icons/pen.png",
         },
         {
@@ -158,7 +158,7 @@ export default function Home() {
         {
           title: "Key Requirement",
           description:
-            "Basic platform familiarity (AliExpress, Namecheap, Amazon)",
+            "Expertise in large-scale operations, chargebacks, refunds, and security.",
           descIcon: "/icons/pen.png",
         },
         {
@@ -186,7 +186,7 @@ export default function Home() {
 
   return (
     <div className="w-full h-[100vh] overflow-y-auto pb-[32px]">
-      <div className="header flex items-center justify-between w-full px-[32px] pt-[64px] pb-[29px] border-b-[1px] border-[#E5E6E6]">
+      <div className="header flex items-center justify-between w-full px-[32px] pt-[32px] pb-[29px] border-b-[1px] border-[#E5E6E6]">
         <p className="text-[#3A3D3F] text-[24px] font-[700]">Settings</p>
         <div className="icons flex items-center w-[96px] gap-[16px]">
           <div className="notification size-[40px] bg-[#F8F3FC] py-[4px] px-[2px] flex items-center justify-center rounded-full">
@@ -208,10 +208,25 @@ export default function Home() {
         </div>
       </div>
       <div className="px-[32px]">
-        <ul className="nav-sub-header flex items-center gap-[32px] pt-[32px] pb-[24px] border-b-[1px] border-[#E5E6E6]">
+        <ul className="nav-sub-header flex items-center gap-[32px] pt-[32px] border-b-[1px] border-[#E5E6E6]">
           {navSubHeader.map((item, index) => (
-            <li key={index} className="text-[14px] text-[#828587] font-[500]">
+            <li
+              key={index}
+              className={`text-[14px]  ${
+                item.name !== "Security Settings" && "text-[#828587]"
+              }  font-[500] ${
+                item.name !== "PA Commission Structures" && "pb-[24px]"
+              } ${
+                item.name == "Security Settings" && "text-[#121619] font-[500]"
+              }`}
+            >
               {item.name}
+              <div
+                className={` w-[80px] ${
+                  item.name == "PA Commission Structures" &&
+                  "border-[#9244D4] border-b-[3px] pb-[24px]"
+                }`}
+              ></div>
             </li>
           ))}
         </ul>
@@ -250,11 +265,13 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-3 grid-rows-2 gap-[10px]   auto-rows-min h-max">
+              <div className="grid grid-cols-3 auto-rows-auto gap-[10px]">
                 {card.miniCards.map((minCard, idx) => (
                   <div
                     key={idx}
-                    className={`h-max flex flex-col gap-[6px] min-h-[78px] py-[13px] pr-[10px] pl-[14px] bg-[#FFFFFF] rounded-[5px] ${
+                    className={` ${
+                      idx == 0 && minCard.descPercentage == 10 && "h-max"
+                    } flex flex-col gap-[6px] min-h-[78px] py-[13px] pr-[10px] pl-[14px] bg-[#FFFFFF] rounded-[5px] ${
                       idx == 1 && "col-start-1 row-start-2"
                     } ${idx == 0 || idx == 1 ? "col-span-2" : "col-span-1"}`}
                   >
