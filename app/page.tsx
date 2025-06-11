@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useTheme } from "next-themes";
-import { ThemeProvider } from "next-themes";
+import SidebarToggle from "@/components/sidebarToggle";
 
 export default function Home() {
   interface PaymentCardInterface {
@@ -186,9 +185,9 @@ export default function Home() {
 
   return (
     <div className="w-full h-[100vh] overflow-y-auto pb-[32px]">
-      <div className="header flex items-center justify-between w-full px-[32px] pt-[32px] pb-[29px] border-b-[1px] border-[#E5E6E6]">
+      <div className="header flex items-center justify-between w-full px-[16px] lg:px-[32px] pt-[32px] pb-[29px] border-b-[1px] border-[#E5E6E6]">
         <p className="text-[#3A3D3F] text-[24px] font-[700]">Settings</p>
-        <div className="icons flex items-center w-[96px] gap-[16px]">
+        <div className="icons flex items-center lg:w-[96px] w-[200px] gap-[16px]">
           <div className="notification size-[40px] bg-[#F8F3FC] py-[4px] px-[2px] flex items-center justify-center rounded-full">
             <Image
               src="/icons/notification.png"
@@ -205,10 +204,11 @@ export default function Home() {
               width={20}
             />
           </div>
+          <div className="w-[32px] lg:hidden "></div>
         </div>
       </div>
-      <div className="px-[32px]">
-        <ul className="nav-sub-header flex items-center gap-[32px] pt-[32px] border-b-[1px] border-[#E5E6E6]">
+      <div className="px-[16px] lg:px-[32px]">
+        <ul className="nav-sub-header flex items-center gap-[32px] pt-[32px] border-b-[1px] border-[#E5E6E6] overflow-x-auto">
           {navSubHeader.map((item, index) => (
             <li
               key={index}
@@ -230,18 +230,18 @@ export default function Home() {
             </li>
           ))}
         </ul>
-        <div className="titlebar px-[25px] py-[10px] bg-[#9244D4] rounded-[5px] mt-[23px]">
+        <div className="titlebar px-[25px] py-[10px] bg-[#9244D4] rounded-[5px] mt-[32px] lg:mt-[23px]">
           <p className="font-[500] text-[20px] text-[#FFFFFF]">
             Payment Assistant Ladder
           </p>
         </div>
-        <div className="card-container flex flex-col gap-[10px] mt-[16px]">
+        <div className="card-container flex flex-col gap-[32px] lg:gap-[10px] mt-[16px]">
           {paymentCards.map((card, idx) => (
             <div
               key={idx}
-              className={`w-full p-[16px] h-max rounded-[15px] ${card.bgColor} flex justify-between`}
+              className={`w-full p-[16px] h-max rounded-[15px] ${card.bgColor} flex flex-col gap-[16px] lg:flex-row lg:justify-between`}
             >
-              <div className="flex gap-[16px]">
+              <div className="flex gap-[16px] items-center lg:items-start">
                 <div className="cardIcon size-[38px] p-[10px] rounded-full bg-[#FFFFFF]">
                   <Image
                     src={card.cardIcon}
@@ -265,7 +265,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-3 auto-rows-auto gap-[10px]">
+              <div className=" flex flex-col lg:grid grid-cols-3 auto-rows-auto gap-[10px]">
                 {card.miniCards.map((minCard, idx) => (
                   <div
                     key={idx}

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Rethink_Sans } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/sidebar";
-import { ThemeProvider } from "next-themes";
+import SidebarToggle from "@/components/sidebarToggle";
 
 const rethinkSans = Rethink_Sans({
   variable: "--font-rethink-sans",
@@ -22,10 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${rethinkSans.variable} antialiased w-full flex items-center`}
+        className={`${rethinkSans.variable} antialiased w-full flex items-center relative`}
       >
-          <Sidebar />
-          {children}
+        <Sidebar />
+        <SidebarToggle />
+        {children}
       </body>
     </html>
   );

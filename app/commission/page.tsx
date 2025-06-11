@@ -112,20 +112,20 @@ const summary: SummaryInterface[] = [
 
 const Commission = (props: Props) => {
   return (
-    <div className="w-full p-[32px] h-[100vh] overflow-y-auto flex flex-col gap-[32px]">
+    <div className="w-full p-[16px] lg:p-[32px] h-[100vh] overflow-y-auto flex flex-col gap-[32px]">
       <div className="flex items-center justify-between pb-[32px]">
         <p className="text-[24px] font-bold">Commissions and Payouts</p>
-        <button className="flex items-center gap-[4px] p-[10px] text-[14px] rounded-[10px] border-[1px] border-[#9244D4] text-[#9244D4]">
+        <button className="flex items-center gap-[4px] p-[10px] rounded-[10px] border-[1px] border-[#9244D4] text-[#9244D4]">
           <Image
             src="/icons/add-line-purple.png"
             alt=""
             height={20}
             width={20}
           />
-          <p>Add payout account</p>
+          <p className=" text-[12px] lg:text-[14px]">Add payout account</p>
         </button>
       </div>
-      <div className="cards flex items-center justify-between gap-[19px]">
+      <div className="cards flex flex-col lg:flex-row items-center justify-between gap-[19px]">
         {summary.map((card) => (
           <Card
             key={typeof card.title !== "string" ? card.type : card.title}
